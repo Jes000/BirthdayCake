@@ -130,9 +130,12 @@
     </div>
   </div>
 
+  <p class="instruction" id="instruction" style="display: none;">Blow to extinguish!</p>
+
   <script>
     const startButton = document.getElementById('startButton');
     const cakeContainer = document.getElementById('cakeContainer');
+    const instructionText = document.getElementById('instruction');
 
     // Function to extinguish the flame with animation
     function extinguishFlame(flame) {
@@ -181,6 +184,8 @@
       // Hide the start button and display the cake
       startButton.style.display = 'none';
       cakeContainer.style.display = 'block';
+      instructionText.style.display = 'block';
+      
 
       // Play birthday song
       const audio = new Audio('birthday_song.mp3');
